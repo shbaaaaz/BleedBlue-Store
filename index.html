@@ -4,9 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://bleedblue-dev.netlify.app/components/css/bleedblue.css"/>
+    <link rel="stylesheet" href="index.css"/>
     <title>BleedBlue Store</title>
 </head>
 <body>
-    <h1>BleedBlue Store lanching soon...</h1>
+    <div class="grid-container">
+        <header>
+            <nav class="navbar light-bg shadow-dark">
+                <div class="navbar-brand">
+                    <div class="brand-logo">
+                        <img class="img-responsive" src="/images/icon.png"/>
+                    </div>
+                    <p class="brand-name">BleedBlue Store</p>
+            </div>
+            <label class="nav-search-bar flex-row align-middle">
+                    <input type="text" class="nav-search-field" placeholder="Type to search" autocomplete="off"/>
+                    <button class="btn btn-nav-search" type="submit"><i class="fas fa-search"></i></button>
+            </label>
+            <ul class="navbar-menu">
+                <li>
+                    <a href="" class="btn btn-primary">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-badge-container">
+                        <i class="far fa-heart text-md-size"><span class="icon-badge">1</span></i>   
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-badge-container">
+                        <i class="far fa-shopping-cart text-md-size"><span class="icon-badge">2</span></i>   
+                     </a> 
+                </li>
+            </ul>
+            </nav>                                                   
+        </header>
+
+        <main>
+            <section id="landing-cover" class="cover-container">
+                <div class="landing-page-cover">
+                    <img loading="lazy" class="img-responsive cover-image" src="/images/landing/cover.jpg" alt="Example Image" loading="lazy"/>
+                    <div class="cover-text">
+                        <h1 class="light-text"> Get your customized jersey at 30% OFF </h1>
+                        <button class="btn btn-light btn-explore">EXPLORE</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="category" class="gutter-vh-xl">
+                <h5 class="text-center">Browse by category</h5>
+                <div  class="category-container">
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/category/men.jpg" alt="men's category" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">MEN</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/category/women.jpg" alt="women's category" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">WOMEN</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/category/kids.jpg" alt="kid's category" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">KIDS</a>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="best-seller" class="gutter-vh-xl">
+                <h5 class="text-center">Best Seller</h5>
+                <div  class="category-container">
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/bestseller/jersey.jpg" alt="best seller jersey" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">INDIAN CRICKET JERSEY</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/bestseller/cap.jpg" alt="bestseller cap" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">INDIAN CRICKET CAP</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="card card-video-container">
+                        <div class="card-video">
+                            <div class="card-video-cover">
+                                <img loading="lazy" class="img-responsive" src="/images/landing/bestseller/bat.jpg" alt="best seller bat" />
+                            </div>
+                            <div class="card-video-caption">
+                                <a class="video-caption-link">KOOKABURRA BAT</a>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="dark-bg padder-vh-lg flex-column align-middle light-text">
+            <p> Made by Shahbaz Khan </p>
+            <ul class="list-reset gutter-vh-lg">
+                <li class="list-inline"><a href="https://twitter.com/shahbazkhan_js" target="_blank" class="light-text"><i class="fab fa-twitter text-md-size"></i></a></li>
+                <li class="list-inline padder-hz-md"><a href="https://github.com/shahbaz4595/BleedBlue-CSS/tree/dev" target="_blank" class="light-text"><i class="fab fa-github text-md-size"></i></a></li>
+                <li class="list-inline"><a href="https://www.linkedin.com/in/shahbaz-khan4595/" target="_blank" class="light-text"><i class="fab fa-linkedin text-md-size"></i></a></li>
+            </ul>
+            <p> &copy; BleedBlue Store </p>
+        </footer>
+    </div>
 </body>
 </html>
