@@ -92,6 +92,15 @@ footer {
     width: 30%;
 }
 
+.card-vertical-thin {
+    width: 30%;
+}
+
+.card-image-vertical {
+    width: 90%;
+    height: 20rem;
+}
+
 @media only screen and (max-width: 755px) {
 
     .landing-page-cover {
@@ -125,6 +134,14 @@ footer {
     .cover-text h1 {
         font-size: 1.5rem;
         text-align: center;
+    }
+
+    .card-vertical-thin {
+        width: 100%;
+    }
+
+    .card-image-vertical {
+        height: 20rem;
     }
 
 }
