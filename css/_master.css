@@ -15,6 +15,12 @@
 
 .navbar-brand {
     flex-grow: 0;
+    gap: 0.2rem;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.6rem;
 }
 
 .navbar-menu {
