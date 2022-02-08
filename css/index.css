@@ -1,3 +1,5 @@
+@import url(_master.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -26,22 +28,11 @@ header {
 
 main {
     grid-area: main;
-    padding: 1rem 5vw;
+    padding: 16vh 4vw;
 }
 
-footer{
+footer {
     grid-area: footer;
-}
-
-/* navbar */
-
-.navbar {
-    padding: 1rem 5vw;
-}
-
-.icon-badge {
-    position:absolute;
-    top: -0.4rem;
 }
 
 /* landing page cover */
@@ -52,7 +43,7 @@ footer{
 }
 
 .landing-page-cover {
-    height: 80vh;
+    height: 26rem;
     width: 100%;
     position: relative;
 }
@@ -70,6 +61,7 @@ footer{
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
+    width: 70%;
 }
 
 .cover-text h1 {
@@ -101,6 +93,22 @@ footer{
 }
 
 @media only screen and (max-width: 755px) {
+
+    .landing-page-cover {
+        height: 18rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .cover-text {
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        transform: translate(-50%, -40%);
+        width: 80%;
+    }
 
     .category-container {
         display: flex;
