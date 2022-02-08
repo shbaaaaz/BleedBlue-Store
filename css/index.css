@@ -43,7 +43,7 @@ footer {
 }
 
 .landing-page-cover {
-    height: 26rem;
+    height: 30rem;
     width: 100%;
     position: relative;
 }
@@ -104,7 +104,7 @@ footer {
 @media only screen and (max-width: 755px) {
 
     .landing-page-cover {
-        height: 18rem;
+        height: 16rem;
         width: 100%;
         position: relative;
     }
