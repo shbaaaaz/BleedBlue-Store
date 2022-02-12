@@ -1,14 +1,4 @@
-@import url(_master.css);
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--bb-light-color);
-    color: var(--bb-dark-color);
-}
+@import url(product.css);
 
 .grid-container{
     margin:0;
@@ -81,27 +71,11 @@ footer {
 
 /* landing page category section */
 
-.category-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.card-video-container {
-    width: 30%;
-}
-
-.card-vertical-thin {
-    width: 30%;
-}
-
-.card-image-vertical {
-    width: 90%;
-    height: 20rem;
-}
-
 @media only screen and (max-width: 755px) {
+
+    main {
+        padding: 22vh 4vw;
+    }
 
     .landing-page-cover {
         height: 16rem;
@@ -119,14 +93,6 @@ footer {
         width: 80%;
     }
 
-    .category-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
     .card-video-container {
         width: 100%;
     }
@@ -134,14 +100,6 @@ footer {
     .cover-text h1 {
         font-size: 1.5rem;
         text-align: center;
-    }
-
-    .card-vertical-thin {
-        width: 100%;
-    }
-
-    .card-image-vertical {
-        height: 20rem;
     }
 
 }
