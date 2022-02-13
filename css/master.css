@@ -118,7 +118,7 @@ body {
     .nav-item-group {
         display: flex;
         flex-direction: column-reverse;
-        gap:0.7rem;
+        gap:1rem;
         width: 100%;
         align-items: start;
     }

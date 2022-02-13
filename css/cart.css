@@ -1,0 +1,109 @@
+@import url(master.css);
+
+.cart-grid-container {
+    margin:0;
+    padding: 0;
+    gap:5px;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display:grid;
+    grid-template-areas: 
+    "header header header header header"
+    "main   main   main   main   main"
+    "main   main   main   main   main"
+    "main   main   main   main   main"
+    "main   main   main   main   main"
+    "footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 10vh 4vw;
+    position: relative;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    grid-area: cartItem;
+}
+
+.card-horizontal {
+    width: 100%;
+}
+
+.cart-details {
+    grid-area: cartDetails;
+    position: sticky;
+}
+
+.card-horizontal {
+    width: 100%;
+}
+
+.card-cart-details {
+    padding: 1rem;
+}
+
+.cart-section {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "cartItem cartItem cartDetails";
+    gap: 2rem;
+}
+
+.card-horizontal {
+    padding-right: 1rem;
+}
+
+.btn-item-quantity {
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem;
+}
+
+.btn-primary {
+    padding: 0.5rem 0.8rem;
+}
+
+.field-item-quantity {
+    width: 3rem;
+}
+
+@media only screen and (max-width: 755px) { 
+
+    .cart-grid-container {
+        margin:0;
+        padding: 0;
+        gap:5px;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        display:grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+
+    main {
+        padding: 12vh 4vw;
+    }
+    
+    .cart-section {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cartItem"
+        "cartDetails";
+    }
+}
