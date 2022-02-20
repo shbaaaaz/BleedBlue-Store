@@ -19,7 +19,7 @@ header {
 
 main {
     grid-area: main;
-    padding: 10vh 10vw;
+    padding: 10vh 20vw;
     position: relative;
 }
 
@@ -29,4 +29,14 @@ footer {
 
 .form-field {
     padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+
+    main {
+        grid-area: main;
+        padding: 14vh 5vw;
+        position: relative;
+    }
+
 }
