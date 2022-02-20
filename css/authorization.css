@@ -1,0 +1,42 @@
+@import url(master.css);
+
+.auth-grid-container {
+    margin:0;
+    padding: 0;
+    gap:5px;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display:grid;
+    grid-template-areas: 
+    "header header header header header"
+    "main   main   main   main   main"
+    "footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 10vh 20vw;
+    position: relative;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.form-field {
+    padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+
+    main {
+        grid-area: main;
+        padding: 14vh 5vw;
+        position: relative;
+    }
+
+}
