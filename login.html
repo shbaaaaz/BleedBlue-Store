@@ -7,11 +7,12 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://bleedblue-dev.netlify.app/components/css/bleedblue.css"/>
-    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/css/authorization.css"/>
     <title>BleedBlue Store</title>
 </head>
 <body>
-    <div class="cart-grid-container">
+
+    <div class="auth-grid-container">
 
         <header>
             <div class="navbar-section">
@@ -41,12 +42,12 @@
                             </li>
                             <li>
                                 <a href="/wishlist.html" class="icon-badge-container" title="whishlist">
-                                    <i class="far fa-heart text-md-size"><span class="icon-badge">1</span></i>   
+                                    <i class="far fa-heart text-md-size"></i>   
                                 </a>
                             </li>
                             <li>
                                 <a href="/cart.html" class="icon-badge-container" title="cart">
-                                    <i class="far fa-shopping-cart text-md-size"><span class="icon-badge">2</span></i>   
+                                    <i class="far fa-shopping-cart text-md-size"></i>   
                                 </a> 
                             </li>
                         </ul>
@@ -56,81 +57,31 @@
         </header>
 
         <main>
-            <section id="cart-section" class="gutter-vh-xl cart-section">
-                <div  class="cart-item-container">
-                  <!-- Horizontal Card-->
-                    <div class="card card-horizontal">
-                        <div class="card-image-horizontal">
-                            <img class="img-responsive" src="/images/products/jersey.jpg" loading="lazy" alt="indian cricket jersey"/>
+            <section class="gutter-vh-xl">
+                <form class="form login-form" id="bb-login-form">
+                    <h4 class="text-center">LogIn</h4>
+                    <div>
+                        <input class="form-field" id="bb-login-email" type="email" name="email" placeholder="Email" required/>
+                    </div>
+                    <div>
+                        <input class="form-field" id="bb-login-password" type="password" name="password" placeholder="Password" minlength="8" required/>
+                    </div>
+                    <div class="flex-row justify-between align-center flex-wrap">
+                        <div>
+                            <input type="checkbox"/>
+                            <label>Remember Password</label>
                         </div>
-                        <div class="card-description flex-column justify-around">
-                            <div class="gutter-vh-sm">
-                                <p class="card-title">Indian Cricket Jersey </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 2000 Rs.</p>
-                            </div>
-                            <div class="flex-row align-center justify-between">
-                                <label>Quantity: </label>
-                                <button class="btn btn-item-quantity">-</button>
-                                <input class="form-field field-item-quantity" type="number" value="1"/>
-                                <button class="btn btn-item-quantity">+</button>
-                            </div>
-                            <div class="card-cta flex-row flex-wrap gap-lg align-center gutter-vh-sm">
-                                <button type="button" class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-trash"></i></span>Remove From Cart</button>
-                            </div>
+                        <div>
+                            <a>Forgot Password</a>
                         </div>
                     </div>
-
-                    <div class="card card-horizontal">
-                        <div class="card-image-horizontal">
-                            <img class="img-responsive" src="/images/products/cap.jpg" loading="lazy" alt="indian cricket jersey"/>
-                        </div>
-                        <div class="card-description flex-column justify-around">
-                            <div class="gutter-vh-sm">
-                                <p class="card-title">Indian Cricket Cap </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 1000 Rs.</p>
-                            </div>
-                            <div class="flex-row align-center justify-between">
-                                <label>Quantity: </label>
-                                <button class="btn btn-item-quantity">-</button>
-                                <input class="form-field field-item-quantity" type="number" value="1"/>
-                                <button class="btn btn-item-quantity">+</button>
-                            </div>
-                            <div class="card-cta flex-row flex-wrap gap-lg align-center gutter-vh-sm">
-                                <button type="button" class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-trash"></i></span>Remove From Cart</button>
-                            </div>
-                        </div>
+                    <button class="btn btn-primary" type="submit">Log In</button>
+                    <div class="form-group">
+                        <p class="text-center">Don't have an account? <a href="/signup.html">Sign up</a></p>
                     </div>
-                    
-                </div>
-
-                <div class="cart-details">
-                    <div class="card card-cart-details">
-                        <div class="flex-row align-center justify-between">
-                            <label>Price (2) </label>
-                            <label>Rs. 3000</label>
-                        </div>
-
-                        <div class="flex-row align-center justify-between">
-                            <label>Discount</label>
-                            <label>Rs. 500</label>
-                        </div>
-
-                        <div class="flex-row align-center justify-between">
-                            <label>Delivery Charges</label>
-                            <label>Rs. 50</label>
-                        </div>
-
-                        <div class="flex-row align-center justify-between">
-                            <h6>Total Amount</h6>
-                            <label>Rs. 2550</label>
-                        </div>
-                        <button class="btn btn-primary full-width">Place Order</button>
-                    </div>
-                </div>
-
+                </form>
             </section>
+
         </main>
 
         <footer class="dark-bg padder-vh-xl light-text">
@@ -176,5 +127,6 @@
         </footer>
 
     </div>
+
 </body>
 </html>
