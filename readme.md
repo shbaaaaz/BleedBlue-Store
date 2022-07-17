@@ -5,7 +5,7 @@ BleedBlue store is an  exclusive e-commerce platform where you can find all your
 ## Live Link
 [https://bleedbluestore.netlify.app](https://bleedbluestore.netlify.app/)
 
-### This application currently includes
+### This application currently includes the UI layers of the application with the pages listed below
 
 * [Home](https://bleedbluestore-dev.netlify.app/) page with different categories to browse.
 
