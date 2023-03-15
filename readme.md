@@ -3,7 +3,7 @@
 BleedBlue store is an  exclusive e-commerce platform where you can find all your cricket gears.
 
 ## Live Link
-[https://bleedbluestore-dev.netlify.app](https://bleedbluestore-dev.netlify.app)
+[https://bleedbluestore-dev.netlify.app](https://bleedbluestore.netlify.app/)
 
 ### This application currently includes the UI layers of the application with the pages listed below
 
