@@ -1,138 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://bleedblue.netlify.app/components/css/bleedblue.css"/>
-    <link rel="stylesheet" href="/css/authorization.css"/>
-    <title>BleedBlue Store </title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bleedblue.netlify.app/components/css/bleedblue.css"
+    />
+    <link rel="stylesheet" href="/css/authorization.css" />
+    <title>BleedBlue Store</title>
+  </head>
+  <body>
     <div class="auth-grid-container">
-
-        <header>
-            <div class="navbar-section">
-                <nav class="navbar light-bg shadow-dark">
-                    <a href="/index.html" class="navbar-brand">
-                        <div class="brand-logo">
-                            <img class="img-responsive" src="/images/bb-light.png" alt="bleedblue logo"/>
-                        </div>
-                        <p class="brand-name">BleedBlue Store</p>
-                    </a>
-                    <div class="nav-item-group">
-                        <form class="nav-search-bar">
-                                <input type="text" class="nav-search-field" placeholder="Type to search..." autocomplete="off"/>
-                                <a class="btn btn-nav-search" type="submit"><i class="fas fa-search"></i></a>
-                        </form>
-                        <ul class="navbar-menu">
-                            <li><button id="burger-menu" class="btn-burger clickable"><i class="fas fa-bars text-md-size"></i></button></li>
-                            <li>
-                                <a href="/login.html" class="icon-badge-container" title="account">
-                                    <i class="far fa-user text-md-size"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/product.html" class="icon-badge-container" title="shop">
-                                    <i class="far fa-store-alt text-md-size"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/wishlist.html" class="icon-badge-container" title="whishlist">
-                                    <i class="far fa-heart text-md-size"></i>   
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/cart.html" class="icon-badge-container" title="cart">
-                                    <i class="far fa-shopping-cart text-md-size"></i>   
-                                </a> 
-                            </li>
-                        </ul>
-                    </div>
-                </nav>   
-            </div>                                            
-        </header>
-
-        <main>
-            <section class="gutter-vh-xl">
-                <form class="form login-form" id="bb-signup-form">
-                    <h4 class="text-center">Sign Up</h4>
-                    <div>
-                        <input class="form-field" type="text" name="first name" placeholder="First Name" required/>
-                    </div>
-                    <div>
-                        <input class="form-field" type="text" name="last name" placeholder="Last Name" required/>
-                    </div>
-                    <div>
-                        <input class="form-field" type="email" name="email" placeholder="Email" required/>
-                    </div>
-
-                    <div>
-                        <input class="form-field" type="password" name="password" placeholder="Password" minlength="8" required/>
-                    </div>
-
-                    <div>
-                        <input class="form-field" type="password" name="confirm password" placeholder="Confirm Password" minlength="8" required/>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="terms" required/>
-                        <label>I accept all <a>Terms and Conditions</a></label>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Sign Up</button>
-                    <div class="form-group">
-                        <p class="text-center">Already have an account? <a href="/login.html">Log In</a></p>
-                    </div>
-                </form>
-            </section>
-        </main>
-
-        <footer class="dark-bg padder-vh-xl light-text">
-            <div class="footer-grid">
-                <div class="footer-column footer-company-column">
-                    <div class="footer-logo">
-                        <div class="brand-logo">
-                            <img class="img-responsive" src="/images/bb-dark.png" alt="bleedblue logo"/>
-                        </div>
-                        <p class="text-md-size text-bold-weight">BleedBlue Store</p>
-                    </div>
-                    <p>Address: New Delhi, India</p>
-                    <ul class="list-reset gutter-vh-lg flex-row gap-md">
-                        <li class="list-inline"><a href="https://instagram.com/shahbazkhan.js" target="_blank" class="light-text"><i class="fab fa-instagram text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://twitter.com/shahbazkhan_js" target="_blank" class="light-text"><i class="fab fa-twitter text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://github.com/shahbaz4595/BleedBlue-Store/tree/dev" target="_blank" class="light-text"><i class="fab fa-github text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://www.linkedin.com/in/shahbaz-khan4595/" target="_blank" class="light-text"><i class="fab fa-linkedin text-md-size"></i></a></li>
-                    </ul>
-                    <p> &copy; All rights reserved</p>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">About</a>
-                    <a class="light-text">Career</a>
-                    <a class="light-text">Contact</a>
-                    <a class="light-text">FAQ</a>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">Feedback</a>
-                    <a class="light-text">Home</a>
-                    <a class="light-text">Payment</a>
-                    <a class="light-text">Policy</a>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">Privacy</a>
-                    <a class="light-text">Return</a>
-                    <a class="light-text">Shipping</a>
-                    <a class="light-text">Terms Of Use</a>
-                </div>
+      <header>
+        <div class="navbar-section">
+          <nav class="navbar light-bg shadow-dark">
+            <a href="/index.html" class="navbar-brand">
+              <div class="brand-logo">
+                <img
+                  class="img-responsive"
+                  src="/images/bb-light.png"
+                  alt="bleedblue logo"
+                />
+              </div>
+              <p class="brand-name">BleedBlue Store</p>
+            </a>
+            <div class="nav-item-group">
+              <form class="nav-search-bar">
+                <input
+                  type="text"
+                  class="nav-search-field"
+                  placeholder="Type to search..."
+                  autocomplete="off"
+                />
+                <a class="btn btn-nav-search" type="submit"
+                  ><i class="fas fa-search"></i
+                ></a>
+              </form>
+              <ul class="navbar-menu">
+                <li>
+                  <button id="burger-menu" class="btn-burger clickable">
+                    <i class="fas fa-bars text-md-size"></i>
+                  </button>
+                </li>
+                <li>
+                  <a
+                    href="/login.html"
+                    class="icon-badge-container"
+                    title="account"
+                  >
+                    <i class="far fa-user text-md-size"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/product.html"
+                    class="icon-badge-container"
+                    title="shop"
+                  >
+                    <i class="far fa-store-alt text-md-size"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/wishlist.html"
+                    class="icon-badge-container"
+                    title="whishlist"
+                  >
+                    <i class="far fa-heart text-md-size"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/cart.html"
+                    class="icon-badge-container"
+                    title="cart"
+                  >
+                    <i class="far fa-shopping-cart text-md-size"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </footer>
+          </nav>
+        </div>
+      </header>
 
+      <main>
+        <section class="gutter-vh-xl">
+          <form class="form login-form" id="bb-signup-form">
+            <h4 class="text-center">Sign Up</h4>
+            <div>
+              <input
+                class="form-field"
+                type="text"
+                name="first name"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                class="form-field"
+                type="text"
+                name="last name"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                class="form-field"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                class="form-field"
+                type="password"
+                name="password"
+                placeholder="Password"
+                minlength="8"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                class="form-field"
+                type="password"
+                name="confirm password"
+                placeholder="Confirm Password"
+                minlength="8"
+                required
+              />
+            </div>
+
+            <div>
+              <input type="checkbox" name="terms" required />
+              <label>I accept all <a>Terms and Conditions</a></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Sign Up</button>
+            <div class="form-group">
+              <p class="text-center">
+                Already have an account? <a href="/login.html">Log In</a>
+              </p>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="dark-bg padder-vh-xl light-text">
+        <div class="footer-grid">
+          <div class="footer-column footer-company-column">
+            <div class="footer-logo">
+              <div class="brand-logo">
+                <img
+                  class="img-responsive"
+                  src="/images/bb-dark.png"
+                  alt="bleedblue logo"
+                />
+              </div>
+              <p class="text-md-size text-bold-weight">BleedBlue Store</p>
+            </div>
+            <p>Address: New Delhi, India</p>
+            <ul class="list-reset gutter-vh-lg flex-row gap-md">
+              <li class="list-inline">
+                <a
+                  href="https://instagram.com/shbaaaaz"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-instagram text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://twitter.com/shbaaaaz"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-twitter text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://github.com/shbaaaaz/BleedBlue-Store"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-github text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://www.linkedin.com/in/shbaaaaz/"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-linkedin text-md-size"></i
+                ></a>
+              </li>
+            </ul>
+            <p>&copy; All rights reserved</p>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">About</a>
+            <a class="light-text">Career</a>
+            <a class="light-text">Contact</a>
+            <a class="light-text">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">Feedback</a>
+            <a class="light-text">Home</a>
+            <a class="light-text">Payment</a>
+            <a class="light-text">Policy</a>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">Privacy</a>
+            <a class="light-text">Return</a>
+            <a class="light-text">Shipping</a>
+            <a class="light-text">Terms Of Use</a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

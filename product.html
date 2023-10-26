@@ -1,267 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://bleedblue.netlify.app/components/css/bleedblue.css"/>
-    <link rel="stylesheet" href="/css/product.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bleedblue.netlify.app/components/css/bleedblue.css"
+    />
+    <link rel="stylesheet" href="/css/product.css" />
     <title>BleedBlue Store</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="product-grid-container">
-
-        <aside id="bb-filter-sidebar" class="sidebar shadow-dark">
-            <ul class="sidenav styled-list list-reset">
-                <li class="flex-row align-center justify-between">
-                    <p class="text-bold-weight">Filters</p>
-                    <a id="bb-btn-clearFilter">Clear</a>
-                </li>
-                <li>
-                    <p class="text-bold-weight">Price</p>
-                    <div class="price-range-container">
-                        <div class="text-sm-size" id="bb-price-value"></div>
-                        <input id="bb-price-range" class="price-range" name="price" type="range" step="500" min="500" max="5000" value="4000"/>
-                    </div>
-                </li>
-                <li>
-                    <p class="text-bold-weight">Category</p>
-                    <div>
-                        <input type="checkbox" id="bb-chk-men" class="clickable" name="men" value="Men"/>
-                        <label for="bb-chk-men">Men</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="bb-chk-women" class="clickable" name="women" value="Women" />
-                        <label for="bb-chk-women">Women</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="bb-chk-kids" class="clickable" name="kids" value="Kids"/>
-                        <label for="bb-chk-kids">Kids</label>
-                    </div>
-                </li>
-                <li>
-                    <p class="text-bold-weight">Sort By</p>
-                    <div>
-                        <input type="radio" id="bb-rd-lowToHigh" class="clickable" name="sortBy" value="Low to High" checked/>
-                        <label>Price - Low to High</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="bb-rd-highToLow" class="clickable" name="sortBy" value="High to Low"/>
-                        <label>Price - High to Low</label>
-                    </div>
-                </li>
-            </ul>
-            <button id="bb-btn-filter-close" type="button" class="btn-close btn-filter-close" role="close filter">&times; </button>
-        </aside>
-
-        <div class="btn-product-filter">
-            <a id="bb-btn-filter" class="btn btn-float"><i class="far fa-filter"></i></a>
-        </div>
-
-        <header>
-            <div class="navbar-section">
-            <nav class="navbar light-bg shadow-dark">
-                    <a href="/index.html" class="navbar-brand">
-                        <div class="brand-logo">
-                            <img class="img-responsive" src="/images/bb-light.png" alt="bleedblue logo"/>
-                        </div>
-                        <p class="brand-name">BleedBlue Store</p>
-                    </a>
-                    <div class="nav-item-group">
-                        <form class="nav-search-bar">
-                                <input type="text" class="nav-search-field" placeholder="Type to search..." autocomplete="off"/>
-                                <a class="btn btn-nav-search" type="submit"><i class="fas fa-search"></i></a>
-                        </form>
-                        <ul class="navbar-menu">
-                            <li><button id="burger-menu" class="btn-burger"><i class="fas fa-bars text-md-size"></i></button></li>
-                            <li>
-                                <a href="/login.html" class="icon-badge-container" title="account">
-                                    <i class="far fa-user text-md-size"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/product.html" class="icon-badge-container" title="shop">
-                                    <i class="far fa-store-alt text-md-size"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/wishlist.html" class="icon-badge-container" title="whishlist">
-                                    <i class="far fa-heart text-md-size"><span class="icon-badge">1</span></i>   
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/cart.html" class="icon-badge-container" title="cart">
-                                    <i class="far fa-shopping-cart text-md-size"><span class="icon-badge">2</span></i>   
-                                </a> 
-                            </li>
-                        </ul>
-                    </div>
-                </nav>   
-            </div>                                                
-        </header>
-
-        <main>
-            <section id="products-section" class="gutter-vh-xl">
-                
-                <div  class="category-container">
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/pad.jpg" loading="lazy" alt="batting pad"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Batting Pad </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 3000 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/gloves.jpg" loading="lazy" alt="batting gloves"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Batting Gloves </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 1500 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/cap.jpg" loading="lazy" alt="indian cricket cap"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Indian Cricket Cap </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 1000 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/bat.jpg" loading="lazy" alt="cricket bat"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Cricket Bat </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 2500 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/helmet.jpg" loading="lazy" alt="batting helmet"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Cricket Helmet </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 4000 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-vertical card-vertical-thin">
-                        <div class="card-image-vertical">
-                            <img class="img-responsive" src="/images/products/stump.jpg" loading="lazy" alt="cricket stumps"/>
-                        </div>
-                        <div class="card-description flex-column justify-around padder-hz-sm">
-                            <div>
-                                <p class="card-title">Cricket Stumps </p>
-                                <p class="text-rg-size primary-text">by BleedBlue</p>
-                                <p> <span>Price:</span> 1200 Rs.</p>
-                            </div>
-                            <p> lorem ipsum dolor sit amet, consectetur adip </p>
-                            <div class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm">
-                                <a><i class="far fa-heart text-lg-size" title="Add to wishlist"></i></a>
-                                <button class="btn btn-primary"><span class="padder-hz-xs"><i class="fas fa-shopping-cart"></i></span>Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
- 
-                </div>
-            </section>
-        </main>
-
-        <footer class="dark-bg padder-vh-xl light-text">
-            <div class="footer-grid">
-                <div class="footer-column footer-company-column">
-                    <div class="footer-logo">
-                        <div class="brand-logo">
-                            <img class="img-responsive" src="/images/bb-dark.png" alt="bleedblue logo"/>
-                        </div>
-                        <p class="text-md-size text-bold-weight">BleedBlue Store</p>
-                    </div>
-                    <p>Address: New Delhi, India</p>
-                    <ul class="list-reset gutter-vh-lg flex-row gap-md">
-                        <li class="list-inline"><a href="https://instagram.com/shahbazkhan.js" target="_blank" class="light-text"><i class="fab fa-instagram text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://twitter.com/shahbazkhan_js" target="_blank" class="light-text"><i class="fab fa-twitter text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://github.com/shahbaz4595/BleedBlue-Store/tree/dev" target="_blank" class="light-text"><i class="fab fa-github text-md-size"></i></a></li>
-                        <li class="list-inline"><a href="https://www.linkedin.com/in/shahbaz-khan4595/" target="_blank" class="light-text"><i class="fab fa-linkedin text-md-size"></i></a></li>
-                    </ul>
-                    <p> &copy; All rights reserved</p>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">About</a>
-                    <a class="light-text">Career</a>
-                    <a class="light-text">Contact</a>
-                    <a class="light-text">FAQ</a>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">Feedback</a>
-                    <a class="light-text">Home</a>
-                    <a class="light-text">Payment</a>
-                    <a class="light-text">Policy</a>
-                </div>
-
-                <div class="footer-column">
-                    <a class="light-text">Privacy</a>
-                    <a class="light-text">Return</a>
-                    <a class="light-text">Shipping</a>
-                    <a class="light-text">Terms Of Use</a>
-                </div>
+      <aside id="bb-filter-sidebar" class="sidebar shadow-dark">
+        <ul class="sidenav styled-list list-reset">
+          <li class="flex-row align-center justify-between">
+            <p class="text-bold-weight">Filters</p>
+            <a id="bb-btn-clearFilter">Clear</a>
+          </li>
+          <li>
+            <p class="text-bold-weight">Price</p>
+            <div class="price-range-container">
+              <div class="text-sm-size" id="bb-price-value"></div>
+              <input
+                id="bb-price-range"
+                class="price-range"
+                name="price"
+                type="range"
+                step="500"
+                min="500"
+                max="5000"
+                value="4000"
+              />
             </div>
-        </footer>
+          </li>
+          <li>
+            <p class="text-bold-weight">Category</p>
+            <div>
+              <input
+                type="checkbox"
+                id="bb-chk-men"
+                class="clickable"
+                name="men"
+                value="Men"
+              />
+              <label for="bb-chk-men">Men</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="bb-chk-women"
+                class="clickable"
+                name="women"
+                value="Women"
+              />
+              <label for="bb-chk-women">Women</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="bb-chk-kids"
+                class="clickable"
+                name="kids"
+                value="Kids"
+              />
+              <label for="bb-chk-kids">Kids</label>
+            </div>
+          </li>
+          <li>
+            <p class="text-bold-weight">Sort By</p>
+            <div>
+              <input
+                type="radio"
+                id="bb-rd-lowToHigh"
+                class="clickable"
+                name="sortBy"
+                value="Low to High"
+                checked
+              />
+              <label>Price - Low to High</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="bb-rd-highToLow"
+                class="clickable"
+                name="sortBy"
+                value="High to Low"
+              />
+              <label>Price - High to Low</label>
+            </div>
+          </li>
+        </ul>
+        <button
+          id="bb-btn-filter-close"
+          type="button"
+          class="btn-close btn-filter-close"
+          role="close filter"
+        >
+          &times;
+        </button>
+      </aside>
+
+      <div class="btn-product-filter">
+        <a id="bb-btn-filter" class="btn btn-float"
+          ><i class="far fa-filter"></i
+        ></a>
+      </div>
+
+      <header>
+        <div class="navbar-section">
+          <nav class="navbar light-bg shadow-dark">
+            <a href="/index.html" class="navbar-brand">
+              <div class="brand-logo">
+                <img
+                  class="img-responsive"
+                  src="/images/bb-light.png"
+                  alt="bleedblue logo"
+                />
+              </div>
+              <p class="brand-name">BleedBlue Store</p>
+            </a>
+            <div class="nav-item-group">
+              <form class="nav-search-bar">
+                <input
+                  type="text"
+                  class="nav-search-field"
+                  placeholder="Type to search..."
+                  autocomplete="off"
+                />
+                <a class="btn btn-nav-search" type="submit"
+                  ><i class="fas fa-search"></i
+                ></a>
+              </form>
+              <ul class="navbar-menu">
+                <li>
+                  <button id="burger-menu" class="btn-burger">
+                    <i class="fas fa-bars text-md-size"></i>
+                  </button>
+                </li>
+                <li>
+                  <a
+                    href="/login.html"
+                    class="icon-badge-container"
+                    title="account"
+                  >
+                    <i class="far fa-user text-md-size"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/product.html"
+                    class="icon-badge-container"
+                    title="shop"
+                  >
+                    <i class="far fa-store-alt text-md-size"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/wishlist.html"
+                    class="icon-badge-container"
+                    title="whishlist"
+                  >
+                    <i class="far fa-heart text-md-size"
+                      ><span class="icon-badge">1</span></i
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/cart.html"
+                    class="icon-badge-container"
+                    title="cart"
+                  >
+                    <i class="far fa-shopping-cart text-md-size"
+                      ><span class="icon-badge">2</span></i
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="products-section" class="gutter-vh-xl">
+          <div class="category-container">
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/pad.jpg"
+                  loading="lazy"
+                  alt="batting pad"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Batting Pad</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 3000 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/gloves.jpg"
+                  loading="lazy"
+                  alt="batting gloves"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Batting Gloves</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 1500 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/cap.jpg"
+                  loading="lazy"
+                  alt="indian cricket cap"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Indian Cricket Cap</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 1000 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/bat.jpg"
+                  loading="lazy"
+                  alt="cricket bat"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Cricket Bat</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 2500 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/helmet.jpg"
+                  loading="lazy"
+                  alt="batting helmet"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Cricket Helmet</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 4000 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-vertical card-vertical-thin">
+              <div class="card-image-vertical">
+                <img
+                  class="img-responsive"
+                  src="/images/products/stump.jpg"
+                  loading="lazy"
+                  alt="cricket stumps"
+                />
+              </div>
+              <div
+                class="card-description flex-column justify-around padder-hz-sm"
+              >
+                <div>
+                  <p class="card-title">Cricket Stumps</p>
+                  <p class="text-rg-size primary-text">by BleedBlue</p>
+                  <p><span>Price:</span> 1200 Rs.</p>
+                </div>
+                <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                <div
+                  class="card-cta flex-row gap-lg align-center justify-between gutter-vh-sm"
+                >
+                  <a
+                    ><i
+                      class="far fa-heart text-lg-size"
+                      title="Add to wishlist"
+                    ></i
+                  ></a>
+                  <button class="btn btn-primary">
+                    <span class="padder-hz-xs"
+                      ><i class="fas fa-shopping-cart"></i></span
+                    >Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="dark-bg padder-vh-xl light-text">
+        <div class="footer-grid">
+          <div class="footer-column footer-company-column">
+            <div class="footer-logo">
+              <div class="brand-logo">
+                <img
+                  class="img-responsive"
+                  src="/images/bb-dark.png"
+                  alt="bleedblue logo"
+                />
+              </div>
+              <p class="text-md-size text-bold-weight">BleedBlue Store</p>
+            </div>
+            <p>Address: New Delhi, India</p>
+            <ul class="list-reset gutter-vh-lg flex-row gap-md">
+              <li class="list-inline">
+                <a
+                  href="https://instagram.com/shbaaaaz.js"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-instagram text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://twitter.com/shbaaaaz"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-twitter text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://github.com/shbaaaaz/BleedBlue-Store"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-github text-md-size"></i
+                ></a>
+              </li>
+              <li class="list-inline">
+                <a
+                  href="https://www.linkedin.com/in/shbaaaaz/"
+                  target="_blank"
+                  class="light-text"
+                  ><i class="fab fa-linkedin text-md-size"></i
+                ></a>
+              </li>
+            </ul>
+            <p>&copy; All rights reserved</p>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">About</a>
+            <a class="light-text">Career</a>
+            <a class="light-text">Contact</a>
+            <a class="light-text">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">Feedback</a>
+            <a class="light-text">Home</a>
+            <a class="light-text">Payment</a>
+            <a class="light-text">Policy</a>
+          </div>
+
+          <div class="footer-column">
+            <a class="light-text">Privacy</a>
+            <a class="light-text">Return</a>
+            <a class="light-text">Shipping</a>
+            <a class="light-text">Terms Of Use</a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="/javscript/product.js"></script>
-</body>
+  </body>
 </html>
